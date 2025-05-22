@@ -5,9 +5,13 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #fff;
     color: #2D3436;
     line-height: 32px;
+}
+
+p strong{
+  color: #6C5CE7;
+  text-decoration: underline rgb(253, 203, 110);
 }
 
 .container {
@@ -25,6 +29,9 @@ body {
   align-items: center;
   padding: 1rem 0;
   border-bottom: 1px solid #eee;
+  background-color: #fff;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.242);
 }
 
 .navbar .menu a {
@@ -191,7 +198,7 @@ body {
   font-weight: 700;
   font-size: 32px;
   color: white;
-  line-height: 48px;
+  line-height: 0px;
   letter-spacing: -0.5px;
   text-align: center;
   text-shadow: 0px 4px 8px #26323814, 0px 2px 4px #26323829;
@@ -302,6 +309,21 @@ body {
   background-image: url(../assets/images/windows.png);
   background-size: cover;
   background-position: center;
+}
+
+.bg-shape{
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  z-index: -5;
+  opacity: 40%;
+}
+
+.bg-dots{
+  position: absolute;
+  top: 120px;
+  right: 0px;
+  z-index: -1;
 }
 
 /* Features */
@@ -422,6 +444,22 @@ body {
   font-size: 24px;
   line-height: 36px;
   letter-spacing: 0.25px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#btn{
+  background: #ffffff;
+  color: #7c3aed;
+  width: 282;
+  height: 48;
+  border-radius: 16px;
+  border: #adadad 1px solid;
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.2px;
   text-align: center;
   vertical-align: middle;
 }
