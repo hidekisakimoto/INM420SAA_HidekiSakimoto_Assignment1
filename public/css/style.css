@@ -96,6 +96,8 @@ body {
 
 .parent {
   display: grid;
+  align-items: center;
+  justify-content: center;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(10, 1fr);
   gap: 30px;
@@ -408,11 +410,20 @@ body {
 .pricing-card button {
   background: #7c3aed;
   color: #fff;
-  padding: 0.75rem;
+  padding: 8px 16px;
   width: 100%;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  width: 306;
+  height: 64;
+  border-radius: 16px;
+
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.25px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 /* Footer */
@@ -604,14 +615,311 @@ body {
 }
 
 @media (max-width: 768px) {
-  .navbar .menu {
-    display: none;
+  html, body {
+  overflow-x: hidden;
+}
+
+.body,
+  .pricing,
+  .features, 
+  .footer {
+    padding: 0 1rem !important;
   }
-  .grid-gallery {
-    grid-template-columns: repeat(2, 1fr);
+
+  /* if you also have a .container with forced justify-content/width, reset it */
+  .container {
+    padding: 0 1rem;
+    width: auto;
+    justify-content: flex-start;
   }
-  .pricing-grid {
-    flex-direction: column;
-    align-items: center;
+
+  /* tighten up headings so they wrap safely */
+  .hero h1,
+  .hero h2,
+  .pricing h2,
+  .pricing p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
+
+.navbar .menu {
+  display: none;
+}
+
+.grid-gallery {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.pricing-grid {
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #2D3436;
+  background: #fff;
+  line-height: 1.4;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  vertical-align: middle;
+
+  width: 128;
+  height: 40;
+  border-radius: 8px;
+}
+
+.logo {
+  height: 20px;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: #fef7e5;
+  position: relative;
+}
+
+.hero h1 {
+  font-family: Inter;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: -1px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.hero .highlight {
+  color: #D63031;
+  background: #55EFC4;
+  padding: 0 0.2em;
+  border-radius: 4px;
+}
+
+.hero h2 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.25px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.btn-scroll {
+  background: none;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+/* Features */
+.features {
+  padding: 1.5rem 1rem;
+}
+
+.features h2 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.25px;
+}
+
+.features p {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1rem;
+  text-align: center;
+}
+
+.feature-card img {
+  width: 32px;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+  color: #555;
+}
+
+.feature-card button {
+  background: #6C5CE7;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Pricing */
+.pricing {
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.pricing h2 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  letter-spacing: -0.5px;
+  vertical-align: middle;
+}
+
+.pricing p {
+  font-family: Inter;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.25px;
+  vertical-align: middle;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 1rem;
+}
+
+.pricing-card.enterprise {
+  background: #6C5CE7;
+  color: #fff;
+}
+
+.pricing-card h3 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.2px;
+  vertical-align: middle;
+  color: #2D3436;
+}
+
+.pricing-card p {
+  color: #6C5CE7;
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.25px;
+  vertical-align: middle;
+}
+
+.pricing-card .price span {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.pricing-card ul {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.pricing-card li {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-card.enterprise li {
+  color: rgba(255,255,255,0.85);
+}
+
+.pricing-card button {
+  width: 282;
+  height: 48;
+  border-radius: 16px;
+
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.pricing-card.enterprise button {
+  background: rgba(255,255,255,0.85);
+  color: #6C5CE7;
+}
+
+/* —— Footer —— */
+.mobile-footer {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.mobile-footer a {
+  color: #6C5CE7;
+  text-decoration: none;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
 }
